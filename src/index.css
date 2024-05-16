@@ -46,7 +46,6 @@ nav {
 .card-img {
   max-width: 100%;
   object-fit: contain;
+  object-position: top;
   flex-grow: 1;
-  justify-self: flex-start;
-  /* margin-bottom: auto; */
 }
