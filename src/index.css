@@ -20,3 +20,33 @@ nav {
   min-height: calc(100vh - 64px - 70px);
   padding: 1.5rem 0;
 }
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  text-align: center;
+  flex-basis: 20rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.card-img {
+  max-width: 100%;
+  object-fit: contain;
+  flex-grow: 1;
+  justify-self: flex-start;
+  /* margin-bottom: auto; */
+}
