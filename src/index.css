@@ -22,30 +22,13 @@ nav {
 }
 
 .movies {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .card {
-  text-align: center;
-  flex-basis: 20rem;
-  margin-left: 1rem;
-  padding: 0.5rem;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-  &:last-child {
-    margin-right: auto;
-  }
-}
-
-.card-img {
-  max-width: 100%;
-  object-fit: contain;
-  object-position: top;
-  flex-grow: 1;
 }

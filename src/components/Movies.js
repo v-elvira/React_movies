@@ -2,10 +2,11 @@ import React from 'react';
 import { Movie } from './Movie';
 
 function Movies(props) {
+    const {movies} = props;
 
     return <div className="movies">
         {
-        props.films.map((x) => <Movie key={x.imdbID} info={x}/>)
+        movies.map((movie) => (<Movie key={movie.imdbID} {...movie}/>))
         }
     </div>;
 }
