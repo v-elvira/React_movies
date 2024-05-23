@@ -15,10 +15,10 @@ class Main extends React.Component {
             this.setState({loaded: true, movies: data.Search})}).catch((err) => this.setState({error: err}))
     }
 
-    fsearch = (text) => {
-        console.log(text)
-        this.setState({movies: [], loaded: false})
-        fetch(`https://www.omdbapi.com/?apikey=f8b224e7&s=${text}`).then((response) => response.json()).then((data) => {
+    fsearch = (text, stype) => {
+        this.setState({movies: [], loaded: false});
+        let strtype = stype !== ''? `&type=${stype}` : ``;
+        fetch(`https://www.omdbapi.com/?apikey=f8b224e7&s=${text}${strtype}`).then((response) => response.json()).then((data) => {
             this.setState({loaded: true, movies: data.Search || []})}).catch((err) => this.setState({error: err}))
     }
 

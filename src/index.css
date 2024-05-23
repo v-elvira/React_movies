@@ -33,3 +33,12 @@ nav {
   top: 0;
   opacity: 60%;
 }
+
+.stype-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .stype {
+  accent-color: purple;
+} */
