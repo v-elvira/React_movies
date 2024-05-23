@@ -7,11 +7,11 @@ class Search extends React.Component {
     }
 
     handleKeyDown = (event) => {
-        if (event.key === 'Enter') {this.props.fsearch(this.state.search)}
+        if (event.key === 'Enter') {this.props.fsearch(this.state.search, this.state.stype)}
     }
 
     handleChange = (event) => {
-        this.setState({stype: event.target.value})
+        this.setState( ()=> ({stype: event.target.value}), () => this.props.fsearch(this.state.search, this.state.stype))
     }
 
     render() {
