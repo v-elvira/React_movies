@@ -26,7 +26,7 @@ class Main extends React.Component {
         return <main className="container content">
             <Search fsearch={this.fsearch}/>
             {   
-                loaded ? (movies.length > 0 ? <Movies movies={movies}/> : <h5>Bad response</h5>): 
+                loaded ? <Movies movies={movies}/>: 
                 (!this.state.error) ? <><Preloader/> <h5>Loading...</h5></>: <h5>Fetching error.</h5>
             }
         </main>
