@@ -17,8 +17,7 @@ class Main extends React.Component {
 
     fsearch = (text, stype) => {
         this.setState({movies: [], loaded: false});
-        let strtype = stype !== ''? `&type=${stype}` : ``;
-        fetch(`https://www.omdbapi.com/?apikey=f8b224e7&s=${text}${strtype}`).then((response) => response.json()).then((data) => {
+        fetch(`https://www.omdbapi.com/?apikey=f8b224e7&s=${text}${stype !== '' ? `&type=${stype}`: ''}`).then((response) => response.json()).then((data) => {
             this.setState({loaded: true, movies: data.Search || []})}).catch((err) => this.setState({error: err}))
     }
 
